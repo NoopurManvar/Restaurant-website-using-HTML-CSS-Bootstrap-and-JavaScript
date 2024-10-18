@@ -1,5 +1,21 @@
 # Restaurant-website-using-HTML-CSS-Bootstrap-and-JavaScript
 Dine2Door is a fully responsive restaurant website, build using HTML, CSS, and JavaScript.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/5433626b-4107-427b-84de-869f331e72b0)
 ![image](https://github.com/user-attachments/assets/67ca5e7d-78e2-4129-91b7-fd0f2cead67f)
 ![image](https://github.com/user-attachments/assets/e5c4f509-b2dd-4095-842a-a9982448b409)
