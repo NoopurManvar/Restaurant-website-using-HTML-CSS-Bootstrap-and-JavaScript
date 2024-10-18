@@ -1,0 +1,97 @@
+/* Container and Row Styling */
+.container {
+    width: 80%;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Dish Details Section */
+.dish-details {
+    padding: 20px 0;
+}
+.dish-details .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 10px;
+}
+.dish-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.dish-details h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.dish-details p {
+    margin-bottom: 5px;
+}
+.add-to-cart {
+    margin-top: 20px;
+}
+.add-to-cart label {
+    margin-right: 10px;
+}
+.add-to-cart input {
+    width: 50px;
+    margin-right: 10px;
+}
+.add-to-cart .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+}
+.customer-reviews h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.star-rating {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.star-rating .fa {
+    font-size: 1.5em;
+}
+.star-rating .checked {
+    color: gold;
+}
+.reviews {
+    max-width: 600px;
+    margin: auto;
+}
+.review {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.review-text {
+    font-style: italic;
+}
+.review-author {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .dish-details .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .add-to-cart {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .add-to-cart input {
+        margin-bottom: 10px;
+    }
+}

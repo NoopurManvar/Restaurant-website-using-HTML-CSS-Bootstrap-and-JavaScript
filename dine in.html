@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Dine-In</title>
+    <link rel="stylesheet" href="../wt project 1/css files/dine in.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="../wt project 1/images/logo4.png" style="height:80px; width:auto;"></div>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="#menu">Food Menu</a>
+                <a href="#drinks">Drinks Menu</a>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="who are we.html">About Us</a></li>
+            <li><a href="#reservations">Reservations</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Experience the best dining experience with us!</p>
+        <a href="#reservations" class="btn">Make a Reservation</a>
+    </header>
+
+    <section id="menu" class="menu-section">
+        <h2>Top Dishes</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Panner Butter Masala</h3>
+                <p>Paneer makhani is an Indian curry which is prepared usually with butter, tomatoes and cashews.</p>
+                <span>Rs. 250</span>
+            </div>
+            <div class="menu-item">
+                <h3>Manchurian</h3>
+                <p>Manchurian is a class of Indian Chinese dishes made by roughly chopping and deep-frying ingredients such as cauliflower.</p>
+                <span>Rs. 200</span>
+            </div>
+            <div class="menu-item">
+                <h3>Chole Bhature</h3>
+                <p style="margin-bottom: 40px;">Chole bhature is a north Indian dish which is a combination of chana masala and bhatura/puri.</p>
+                <span>Rs. 350</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="drinks" class="menu-section">
+        <h2>Popular Drinks</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Mango Lassi</h3>
+                <p style="margin-bottom: 45px;">Mango lassi is a creamy, refreshing drink made with yogurt, mangoes, milk or cream.</p>
+                <span>Rs. 80</span>
+            </div>
+            <div class="menu-item">
+                <h3>Masala Chai</h3>
+                <p style="margin-bottom: 20px;">Masala chai is made by brewing black tea in milk, water and sugar. Adding aromatic herbs and spices creates masala chai.</p>
+                <span>Rs. 20</span>
+            </div>
+            <div class="menu-item">
+                <h3>Soft Drinks</h3>
+                <p style="margin-bottom: 95px;">Refreshing soft drinks to complement your meal.</p>
+                <span>Rs. 80</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>We are committed to providing the best dining experience with fresh ingredients and a cozy atmosphere.</p>
+    </section>
+
+    <section id="reservations" class="reservations-section">
+        <h2>Make a Reservation</h2>
+        <form id="reservationForm" onsubmit="return reservation()">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <span id="nm" style="color:red;"></span>
+            <input type="text" id="phone" placeholder="Your Phone Number" required>
+            <span id="pn" style="color:red;"></span>
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>
+            <input type="number" placeholder="No. of people" id="num" min="1" required>
+            <button type="submit" class="btn">Reserve Table</button>
+        </form>
+        <p id="confirmation" class="confirmation-message"></p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Dine2Door. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function reservation() {
+         document.getElementById("reservationForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting the default way
+
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+
+        // Validate phone number
+        if (!/^\d+$/.test(phone)) {
+            document.getElementById("pn").innerHTML = "Enter digits only";
+            return false; // Prevent further execution if invalid
+        } else {
+            document.getElementById("pn").innerHTML = ""; // Clear error if valid
+        }
+
+        // Show confirmation message
+        const confirmationMessage = `Thank you, ${name}! Your reservation for ${date} at ${time} has been received.`;
+        document.getElementById("confirmation").textContent = confirmationMessage;
+
+        // Clear the form fields
+        document.getElementById("reservationForm").reset();
+    });
+    }
+
+    </script>
+</body>
+</html>

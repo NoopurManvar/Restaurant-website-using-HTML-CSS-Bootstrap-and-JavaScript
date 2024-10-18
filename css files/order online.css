@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+nav {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: black; /* Dark gray/black */
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.nav-link:hover {
+    background-color: #A9A9A9; /* Dark gray hover background */
+    color: #fff ;
+}
+
+/* Logo Section */
+header img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s;
+    transition: transform 0.3s ease;
+
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* Search Box */
+.input-group .form-control {
+    border-radius: 50px 0 0 50px;
+    border: 2px solid #8a96a3; /* Dark gray border */
+}
+
+.input-group .btn {
+    border-radius: 0 50px 50px 0;
+    background-color: #D3D3D3; /* Dark gray background */
+    color: white;
+    border: 2px solid #343a40; /* Dark gray border */
+    transition: all 0.3s ease;
+    color:black;
+}
+
+.input-group .btn:hover {
+    background-color: #D3D3D3; /* Slightly lighter gray on hover */
+    border-color: #D3D3D3;
+}
+
+.card {
+    margin-top:20px;
+    height:290px;
+    width:230px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.dish-card {
+    display: none; /* Hide all cards by default */
+}
+
+.dish-card.show {
+    display: flex !important; /* Ensure visible cards use flex layout */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40; /* Dark gray title */
+}
+
+.card img {
+    height:240px;
+    width:230px;
+    border-bottom: 2px solid #343a40; /* Dark gray border under the image */
+}
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+}
+
+footer h5 {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer img {
+    width: 150px;
+    margin-top: 15px;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+/* Buttons for Play Store and App Store */
+footer .mt-3 img {
+    width: 130px;
+    margin: 10px 5px;
+}
+
+footer .mt-3 img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}

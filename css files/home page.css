@@ -1,0 +1,220 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* Add this to your existing CSS */
+.background {
+    background-image: url('../wt project 1/images/background2.jpeg'); /* Update with the correct path */
+    background-size: cover; /* Adjust the background size */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: calc(100vh - 200px); /* Adjust height to fit between navbar and cards */
+    padding-bottom: 50px; /* Add some padding at the bottom */
+}
+.input-group-prepend img {
+    width: 150px; /* Adjust size as needed */
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Navbar */
+nav {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: #343a40;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.nav-link:hover {
+    background-color: #5E5B5B; 
+}
+
+/* Logo Section */
+header img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* Search Box and Location Input */
+.input-group .form-control {
+    border-radius: 50px 0 0 50px;
+    border: 2px solid #343a40;
+}
+
+.input-group .btn {
+    border-radius: 0 50px 50px 0;
+    background-color: white;
+    color: white;
+    border: 2px solid #343a40;
+    transition: all 0.3s ease;
+}
+
+.input-group .btn:hover {
+    background-color: #555555; 
+    border-color: #555555;
+}
+
+/* Location and Search Bar Styling */
+.location-input {
+    border: 2px solid black;
+    border-radius: 50px;
+    padding-left: 45px;
+    height: 45px;
+}
+
+.location-input::placeholder {
+    color: #666;
+}
+
+.location-input:focus {
+    border-color: black;
+}
+
+#search {
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+#search::placeholder {
+    color: #666;
+}
+
+#search:focus {
+    border-color: black;
+}
+
+.search-btn {
+    border: none;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #333;
+}
+
+/* Align the location icon inside the location input */
+.input-group-prepend .input-group-text {
+    background-color: white;
+    border: none;
+}
+
+.input-group-prepend .input-group-text img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Cards Section */
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.card img {
+    border-bottom: 2px solid #343a40;
+}
+
+/* Carousel */
+.carousel-item img {
+    filter: grayscale(30%);
+    transition: filter 0.5s ease;
+}
+
+.carousel-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: black;
+    padding: 40px 0;
+}
+
+footer h5 {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer img {
+    width: 150px;
+    margin-top: 15px;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+/* Buttons for Play Store and App Store */
+footer .mt-3 img {
+    width: 130px;
+    margin: 10px 5px;
+}
+
+footer .mt-3 img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* For responsiveness on smaller screens */
+@media (max-width: 767px) { 
+    .fixed-cards { top: 50px; } 
+    .carousel { margin-top: 150px; } 
+}
+
+/* Customizations for smaller devices */
+@media (max-width: 576px) {
+    header img {
+        width: 200px;
+    }
+
+    .input-group {
+        max-width: 100%;
+    }
+
+    .card {
+        width: 250px;
+    }
+
+    .carousel-item img {
+        height: 400px;
+    }
+}
